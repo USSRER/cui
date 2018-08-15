@@ -8,7 +8,7 @@ WIDTH, HEIGHT = 640, 480
 BACKGROUND = (0, 191, 255)
 
 
-# 按钮
+
 def button(text, x, y, w, h, color, screen):
     pygame.draw.rect(screen, color, (x, y, w, h))
     font = pygame.font.Font('/Users/apple/Downloads/cui/mini.TTF', 20)
@@ -18,7 +18,7 @@ def button(text, x, y, w, h, color, screen):
     screen.blit(textRender, textRect)
 
 
-# 标题
+
 def title(text, screen, scale, color=(255, 0, 0)):
     font = pygame.font.Font('/Users/apple/Downloads/cui/mini.TTF', WIDTH//(len(text)*2))
     textRender = font.render(text, True, color)
@@ -27,13 +27,11 @@ def title(text, screen, scale, color=(255, 0, 0)):
     screen.blit(textRender, textRect)
 
 
-# 生成随机的位置坐标
 def get_random_pos():
     x, y = random.randint(20, 620), random.randint(20, 460)
     return x, y
 
 
-# 点击喜欢按钮后显示的页面
 def show_like_interface(text, screen, color=(255, 0, 0)):
     screen.fill(BACKGROUND)
     font = pygame.font.Font('/Users/apple/Downloads/cui/mini.TTF', WIDTH//(len(text)))
@@ -49,7 +47,7 @@ def show_like_interface(text, screen, color=(255, 0, 0)):
                 sys.exit()
 
 
-# 主函数
+
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
