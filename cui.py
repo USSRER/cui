@@ -11,7 +11,7 @@ BACKGROUND = (0, 191, 255)
 # 按钮
 def button(text, x, y, w, h, color, screen):
     pygame.draw.rect(screen, color, (x, y, w, h))
-    font = pygame.font.Font('/Users/sunkai/Downloads/cui/mini.TTF', 20)
+    font = pygame.font.Font('/Users/apple/Downloads/cui/mini.TTF', 20)
     textRender = font.render(text, True, (0, 0, 0))
     textRect = textRender.get_rect()
     textRect.center = ((x+w/2), (y+h/2))	
@@ -20,7 +20,7 @@ def button(text, x, y, w, h, color, screen):
 
 # 标题
 def title(text, screen, scale, color=(255, 0, 0)):
-    font = pygame.font.Font('/Users/sunkai/Downloads/cui/mini.TTF', WIDTH//(len(text)*2))
+    font = pygame.font.Font('/Users/apple/Downloads/cui/mini.TTF', WIDTH//(len(text)*2))
     textRender = font.render(text, True, color)
     textRect = textRender.get_rect()
     textRect.midtop = (WIDTH/scale[0], HEIGHT/scale[1])
@@ -36,7 +36,7 @@ def get_random_pos():
 # 点击喜欢按钮后显示的页面
 def show_like_interface(text, screen, color=(255, 0, 0)):
     screen.fill(BACKGROUND)
-    font = pygame.font.Font('/Users/sunkai/Downloads/cui/mini.TTF', WIDTH//(len(text)))
+    font = pygame.font.Font('/Users/apple/Downloads/cui/mini.TTF', WIDTH//(len(text)))
     textRender = font.render(text, True, color)
     textRect = textRender.get_rect()
     textRect.midtop = (WIDTH/2, HEIGHT/2)
@@ -70,7 +70,7 @@ def main():
     like_color = (255, 0, 255)
     while running:
         screen.fill(BACKGROUND)
-        img = pygame.image.load("/Users/sunkai/Downloads/cui/cui.png")
+        img = pygame.image.load("/Users/apple/Downloads/cui/cui.png")
         imgRect = img.get_rect()
         imgRect.midtop = WIDTH//2, HEIGHT//4
         screen.blit(img, imgRect)
